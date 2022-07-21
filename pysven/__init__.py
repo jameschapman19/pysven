@@ -204,35 +204,3 @@ class SVEN(MultiOutputMixin, RegressorMixin, LinearModel):
             return safe_sparse_dot(X, self.coef_.T, dense_output=True) +self.intercept_
         else:
             return super()._decision_function(X)
-
-if __name__ == '__main__':
-    n = 800
-    p = 300
-
-    # high dimensional features
-    X = np.zeros((n, p))
-    signal1 = np.arange(0, n)
-    signal2 = 10 * np.log(np.arange(0, n) + 1)
-    X[:, 0], X[:, 1], gau_noise = signal1, signal2, np.random.randn(n, p - 2)
-    X[:, 2:] = gau_noise
-    y = (
-            signal1
-            + signal2
-            + np.random.randn(
-        n,
-    )
-    )
-
-    # normalization
-    Xtrain, Xtest, ytrain, ytest = (
-        X[: n - 100, :],
-        X[n - 100:, :],
-        y[: n - 100],
-        y[n - 100:],
-    )
-    Xtrain = (Xtrain - np.mean(Xtrain, axis=0)) / np.std(Xtrain, axis=0)
-    Xtest = (Xtest - np.mean(Xtest, axis=0)) / np.std(Xtest, axis=0)
-    ytrain = ytrain - np.mean(ytrain)
-    ytest = ytest - np.mean(ytest)
-    model=SVEN(t=100, lambda_=100).fit(Xtrain, ytrain)
-    print()
