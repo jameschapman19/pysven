@@ -6,7 +6,7 @@ Machines with an Application to GPU Computing' in a scikit-learn compatible way
 ## Installation
 
 ```
-pip install pysven
+pip install pip install git+https://github.com/jameschapman19/pysven
 ```
 
 ## Credit
