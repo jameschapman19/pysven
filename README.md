@@ -8,3 +8,8 @@ Machines with an Application to GPU Computing' in a scikit-learn compatible way
 ```
 pip install pysven
 ```
+
+## Credit
+
+With thanks to andyc1997 for his implementation at https://github.com/andyc1997/support-vector-elastic-net
+
