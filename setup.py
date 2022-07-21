@@ -5,6 +5,7 @@ setup(
     version='0',
     packages=['pysven'],
     url="https://github.com/jameschapman19/pysven",
+    requires=['scikit-learn'],
     license='MIT',
     author='James Chapman',
     author_email='james.chapman.19@ucl.ac.uk',
