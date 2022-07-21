@@ -56,7 +56,7 @@ class SVEN(MultiOutputMixin, RegressorMixin, LinearModel):
     [4.08007826]
     """
 
-    def __init__(self, t, lambda_, max_iter=100, tol=0.0001, copy_X=True, fit_intercept=True, random_state=None, normalize=False):
+    def __init__(self, t=1, lambda_=1, max_iter=100, tol=0.0001, copy_X=True, fit_intercept=True, random_state=None, normalize=False):
         # hyperparameters
         self.t = t
         self.lambda_ = lambda_
