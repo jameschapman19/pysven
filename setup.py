@@ -1,7 +1,7 @@
 from setuptools import setup
 
 with open('requirements.txt', "r") as f:
-    required = f.read().splitlines()
+    required = f.read()
 
 setup(
     name='pysven',
